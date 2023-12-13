@@ -1,1 +1,1 @@
-# Inertia-vue-project
+# inertia-vue-project
