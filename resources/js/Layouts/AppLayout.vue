@@ -51,6 +51,10 @@ const logout = () => {
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
+
+                                <NavLink :href="route('notes.index')" :active="route().current('notes.*')">
+                                    Notes
+                                </NavLink>
                             </div>
                         </div>
 
@@ -282,6 +286,9 @@ const logout = () => {
 
             <!-- Page Content -->
             <main>
+                <div v-if="$page.props.flash.message" class="dark:bg-white text-gray-950 text-sm font-bold p-4">
+                    <p>{{ $page.props.flash.message }}</p>
+                </div>
                 <slot />
             </main>
         </div>
